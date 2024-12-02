@@ -43,7 +43,14 @@ function App() {
     const formHandlerPostcode = (e) =>{setPostcode(e.target.value);};
 
     //handler voor het verzenden van formulier
+const handleSubmit= (e) =>
+    { e.preventDefault();
+        console.log("Voornaam: ", voorNaam);
 
+        console.log("Achternaam: ", achterNaam);
+        console.log("Leeftijd: ", leeftijd);
+        console.log("Postcode: ", postcode);
+    };
 
 
     return (
@@ -78,7 +85,7 @@ function App() {
                 <button type="button" name="reset" onClick={resetCounter}>Reset </button></article>
             </section>
             <section>
-                <form type="submit">
+                <form onSubmit={handleSubmit}>
                     <label htmlFor="voornaam">Voornaam</label>
                     <input type="text" name="voornaam" onChange={formHandlerVoorNaam} value={voorNaam}></input>
                     <label htmlFor="achternaam">Achternaam</label>
@@ -88,7 +95,7 @@ function App() {
                     <label htmlFor="postcode">Postcode</label>
                     <input type="text" name="postcode" onChange={formHandlerPostcode} value={postcode}></input>
                     {/*<label htmlFor="bezorgfrequentie">Bezorgfrequentie</label>*/}
-
+<button type="submit">Submit</button>
                 </form>
             </section>
             </main>
