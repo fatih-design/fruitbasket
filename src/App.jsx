@@ -30,14 +30,20 @@ function App() {
     // state van de formulieer gegevens
     const [voorNaam, setVoorNaam] = useState("");
     const [achterNaam,setAchterNaam] = useState("");
+    const [leeftijd,setLeeftijd] = useState(0);
+    const [postcode,setPostcode] = useState("");
+
 
     //bijwerken van de formuliergegevens
     const formHandlerVoorNaam = (e) => {
         setVoorNaam(e.target.value);
     };
-    const formHandlerAchterNaam = (e)=> {setAchterNaam(e.target.value)};
+    const formHandlerAchterNaam = (e)=> {setAchterNaam(e.target.value);};
+    const formHandlerLeeftijd = (e)=>{setLeeftijd(e.target.value);};
+    const formHandlerPostcode = (e) =>{setPostcode(e.target.value);};
 
     //handler voor het verzenden van formulier
+
 
 
     return (
@@ -77,10 +83,10 @@ function App() {
                     <input type="text" name="voornaam" onChange={formHandlerVoorNaam} value={voorNaam}></input>
                     <label htmlFor="achternaam">Achternaam</label>
                     <input type="text" name="achternaam" onChange={formHandlerAchterNaam} value={achterNaam}></input>
-                    {/*<label htmlFor="leeftijd">Leeftijd</label>*/}
-                    {/*<input type="number" name="leeftijd"></input>*/}
-                    {/*<label htmlFor="postcode">Postcode</label>*/}
-                    {/*<input type="text" name="postcode"></input>*/}
+                    <label htmlFor="leeftijd">Leeftijd</label>
+                    <input type="number" name="leeftijd" onChange={formHandlerLeeftijd} value={leeftijd}></input>
+                    <label htmlFor="postcode">Postcode</label>
+                    <input type="text" name="postcode" onChange={formHandlerPostcode} value={postcode}></input>
                     {/*<label htmlFor="bezorgfrequentie">Bezorgfrequentie</label>*/}
 
                 </form>
