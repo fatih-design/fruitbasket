@@ -1,0 +1,64 @@
+/* App.css */
+
+/* Hoofdcontainer voor artikelen */
+.fruit-container {
+    display: flex;
+    justify-content: space-between; /* Zorgt voor gelijke afstand */
+    flex-wrap: wrap; /* Laat items op een nieuwe rij springen bij weinig ruimte */
+    gap: 16px; /* Ruimte tussen de artikelen */
+    padding: 16px;
+}
+
+/* Artikel styling */
+.fruit-item {
+    display: flex;
+    flex-direction: column; /* Stapel items boven elkaar */
+    align-items: center; /* Centreer items horizontaal */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: calc(25% - 16px); /* 4 artikelen per rij */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Afbeelding styling */
+.fruit-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+/* Label styling */
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Knoppen en input styling */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input {
+    width: 60px;
+    text-align: center;
+    font-size: 16px;
+    padding: 4px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
